@@ -220,11 +220,6 @@ ggplotly(plotly_a)
 The interactive graph above plots each country's life expectancy and GDP per capita for the most recently-available data in the dataset (2007).
 
 
-
-
-
-
-
 <!--
 ## Comparing Former Yugoslavian Countries
 
@@ -262,41 +257,5 @@ yugoslavia %>%
               total_pop = sum(pop),
               mean_life_exp = mean(lifeExp),
               range_life_exp = max(lifeExp) - min(lifeExp))
-
 ```
 --> 
-<!--
-## Just for fun... Comparing Countries in Epcot
-Disney World's Epcot theme park features 'pavillions' that highlight the cultures of 11 countries:
-
-* Canada
-* United Kingdom
-* France 
-* Morocco 
-* Japan 
-* United States
-* Italy 
-* Germany 
-* China 
-* Norway 
-* Mexico 
-
-Characteristics of these countries can be compared using the gapminder dataset. 
-
-```{r, echo=FALSE}
-epcot_2005<- gapminder %>% 
-  mutate(pop_million=pop/1000000) %>%
-  filter(year=='2005' & country=='Canada' | country=='United Kingdom' | country=='France' | country=='Morocco' | country=='Japan' | country=='United States' | country=='Italy' | country=='Germany' | country=='China' | country=='Norway' | country=='Mexico')
-ggplot(data = epcot_2005) +
-  geom_smooth(mapping = aes(x = year, y = gdpPercap, color = country)) +
-  facet_wrap(~ country) +
-  theme(legend.position="none") +
-  xlab("Year") + 
-  ylab("GDP per capita") +
-  ggtitle("GDP per capita in Epcot countries \n2005")+
-  theme(plot.title = element_text(hjust = 0.5))
-```
---> 
-
-
-
