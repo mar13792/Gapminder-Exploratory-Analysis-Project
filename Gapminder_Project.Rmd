@@ -220,7 +220,6 @@ ggplotly(plotly_a)
 The interactive graph above plots each country's life expectancy and GDP per capita for the most recently-available data in the dataset (2007).
 
 
-<!--
 ## Comparing Former Yugoslavian Countries
 
 ```{r}
@@ -258,4 +257,3 @@ yugoslavia %>%
               mean_life_exp = mean(lifeExp),
               range_life_exp = max(lifeExp) - min(lifeExp))
 ```
---> 
